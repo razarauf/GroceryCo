@@ -5,14 +5,13 @@ namespace GroceryCo
 {
     public class Product
     {
-        public string Name { get; set; }
-        public float Price { get; set; }
-        public int Quantity { get; set; }
+        private string name;
+        private float price;
+        private int quantity;
         // How many cents off:
-        public float Discount { get; set; }
-        public float Total { get; set; }
-        public float QuantityDiscount { get; set; }
-        //public int AdditionalDiscount { get; set; 
+        private float discount;
+        private float quantityDiscount;
+        //public int additionalDiscount;
 
         public List<Product> Products;
 
@@ -21,29 +20,27 @@ namespace GroceryCo
             Products = new List<Product>();
         }
 
-        public List<Product> GroupItems(string[] logFile)
+        public void GroupItems(string[] logFile)
         {
             for (int i = 0; i < logFile.Length; i++)
             {
                 if (!CheckIfProductExists(logFile[i], Products))
                 {
-                    Products.Add(new Product { Name = logFile[i] });
+                    Products.Add(new Product { name = logFile[i] });
                 }
             }
 
             for (int i = 0; i < Products.Count; i++)
             {
-                Products[i].Quantity = GetQuantity(Products[i].Name, logFile);
+                Products[i].quantity = GetQuantity(Products[i].name, logFile);
             }
-
-            return Products;
         }
 
-        public bool CheckIfProductExists(string currentProd, List<Product> products)
+        private bool CheckIfProductExists(string currentProd, List<Product> products)
         {
             for (int i = 0; i < products.Count; i++)
             {
-                if (products[i].Name == currentProd)
+                if (products[i].name == currentProd)
                 {
                     return true;
                 }
@@ -52,7 +49,7 @@ namespace GroceryCo
             return false;
         }
 
-        public int GetQuantity(string product, string[] logFile)
+        private int GetQuantity(string product, string[] logFile)
         {
             int quantity = 0;
 
@@ -67,31 +64,30 @@ namespace GroceryCo
             return quantity;
         }
 
-        public List<Product> SetPricesAndDiscountFromCatalog()
+        public void SetPricesAndDiscountFromCatalog()
         {
             foreach (var eachProd in Products)
             {
-                if (eachProd.Name.ToLower() == "apple")
+                if (eachProd.name.ToLower() == "apple")
                 {
-                    eachProd.Price = 0.75f;
-                    eachProd.Discount = 0.25f;
+                    eachProd.price = 0.75f;
+                    eachProd.discount = 0.25f;
                 }
-                else if (eachProd.Name.ToLower() == "banana")
+                else if (eachProd.name.ToLower() == "banana")
                 {
-                    eachProd.Price = 1.0f;
+                    eachProd.price = 1.0f;
                 }
-                else if (eachProd.Name.ToLower() == "carrot")
+                else if (eachProd.name.ToLower() == "carrot")
                 {
-                    eachProd.Price = 4f;
-                    eachProd.QuantityDiscount = 2f;
+                    eachProd.price = 4f;
+                    eachProd.quantityDiscount = 2f;
                 }
-                else if (eachProd.Name.ToLower() == "potato")
+                else if (eachProd.name.ToLower() == "potato")
                 {
-                    eachProd.Price = 1.50f;
-                    eachProd.Discount = 0.15f;
+                    eachProd.price = 1.50f;
+                    eachProd.discount = 0.15f;
                 }
             }
-            return Products;
         }
 
         public float DetermineTotal()
@@ -101,14 +97,15 @@ namespace GroceryCo
             for (int i = 0; i < Products.Count; i++)
             {
                 // Group discount
-                if (Products[i].Quantity >= 3 && Products[i].Quantity % 3 == 0 && Products[i].Name == "carrot")
+                if (Products[i].quantityDiscount > 0 && Products[i].quantity >= 3 )
                 {
-                    float tmp = Products[i].Quantity / 3 * Products[i].QuantityDiscount;
-                    total += (Products[i].Price) * Products[i].Quantity/3 * Products[i].QuantityDiscount;
+                    total += (float) Math.Floor(Products[i].quantity / 3f) * Products[i].quantityDiscount;
+                    total += Products[i].quantity % 3f * Products[i].price;
                 }
+                // Original and sale price
                 else
                 {
-                    total += (Products[i].Price - Products[i].Discount) * Products[i].Quantity;
+                    total += (Products[i].price - Products[i].discount) * Products[i].quantity;
                 }
             }
 

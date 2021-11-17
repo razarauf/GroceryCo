@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/razarauf/Projects/GroceryCo/GroceryCo/GroceryCo.csproj": {}
+    "/Users/razarauf/Projects/GroceryCo/GroceryCo/GroceryCo/GroceryCo.csproj": {}
   },
   "projects": {
-    "/Users/razarauf/Projects/GroceryCo/GroceryCo/GroceryCo.csproj": {
+    "/Users/razarauf/Projects/GroceryCo/GroceryCo/GroceryCo/GroceryCo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/razarauf/Projects/GroceryCo/GroceryCo/GroceryCo.csproj",
+        "projectUniqueName": "/Users/razarauf/Projects/GroceryCo/GroceryCo/GroceryCo/GroceryCo.csproj",
         "projectName": "GroceryCo",
-        "projectPath": "/Users/razarauf/Projects/GroceryCo/GroceryCo/GroceryCo.csproj",
+        "projectPath": "/Users/razarauf/Projects/GroceryCo/GroceryCo/GroceryCo/GroceryCo.csproj",
         "packagesPath": "/Users/razarauf/.nuget/packages/",
-        "outputPath": "/Users/razarauf/Projects/GroceryCo/GroceryCo/obj/",
+        "outputPath": "/Users/razarauf/Projects/GroceryCo/GroceryCo/GroceryCo/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/razarauf/.config/NuGet/NuGet.Config"

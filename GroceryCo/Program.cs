@@ -15,30 +15,33 @@ namespace GroceryCo
 
         static void Main(string[] args)
         {
+            string INPUT_FILE;
 
-            string INPUT_FILE = "/Users/razarauf/Projects/GroceryCo/GroceryCo/INPUT_FILE.txt";
+            Console.WriteLine("Scan products: ");
+            INPUT_FILE = Console.ReadLine();
 
-            //Console.WriteLine("Scan products: ");
-            //INPUT_FILE = Console.ReadLine();
+            if (File.Exists(INPUT_FILE))
+            {
+                string[] logFile = File.ReadAllLines(INPUT_FILE);
 
-            string[] logFile = File.ReadAllLines(INPUT_FILE);
-            //List<string> logList = new List<string>(logFile);
+                Product product = new Product();
 
-            Product product = new Product();
+                // Group items
+                product.GroupItems(logFile);
 
-            // Group items
-            List<Product> prods = product.GroupItems(logFile);
+                // Assign Prices and Discount 
+                product.SetPricesAndDiscountFromCatalog();
 
-            // Assign Prices and Discount 
-            prods = product.SetPricesAndDiscountFromCatalog();
+                // Determine the discount and total
+                float total = product.DetermineTotal();
 
-            // Determine the discount and total
-            float total = product.DetermineTotal();
-
-            Console.WriteLine(String.Format("Total Due: {0:C}", total));
+                Console.WriteLine(String.Format("Total Due: {0:C}", total));
+            }
+            else
+            {
+                Console.WriteLine("No products");
+            }
             Console.ReadKey();
         }
-
-        
     }
 }
