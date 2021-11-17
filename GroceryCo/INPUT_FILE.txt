@@ -1,0 +1,12 @@
+apple
+banana
+apple
+apple
+carrot
+banana
+potato
+carrot
+carrot
+carrot
+carrot
+carrot

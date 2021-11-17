@@ -1,0 +1,13 @@
+/Users/razarauf/Projects/GroceryCo/GroceryCo/bin/Debug/netcoreapp3.1/GroceryCo.deps.json
+/Users/razarauf/Projects/GroceryCo/GroceryCo/bin/Debug/netcoreapp3.1/GroceryCo.runtimeconfig.json
+/Users/razarauf/Projects/GroceryCo/GroceryCo/bin/Debug/netcoreapp3.1/GroceryCo.runtimeconfig.dev.json
+/Users/razarauf/Projects/GroceryCo/GroceryCo/bin/Debug/netcoreapp3.1/GroceryCo.dll
+/Users/razarauf/Projects/GroceryCo/GroceryCo/bin/Debug/netcoreapp3.1/GroceryCo.pdb
+/Users/razarauf/Projects/GroceryCo/GroceryCo/obj/Debug/netcoreapp3.1/GroceryCo.csproj.AssemblyReference.cache
+/Users/razarauf/Projects/GroceryCo/GroceryCo/obj/Debug/netcoreapp3.1/GroceryCo.GeneratedMSBuildEditorConfig.editorconfig
+/Users/razarauf/Projects/GroceryCo/GroceryCo/obj/Debug/netcoreapp3.1/GroceryCo.AssemblyInfoInputs.cache
+/Users/razarauf/Projects/GroceryCo/GroceryCo/obj/Debug/netcoreapp3.1/GroceryCo.AssemblyInfo.cs
+/Users/razarauf/Projects/GroceryCo/GroceryCo/obj/Debug/netcoreapp3.1/GroceryCo.csproj.CoreCompileInputs.cache
+/Users/razarauf/Projects/GroceryCo/GroceryCo/obj/Debug/netcoreapp3.1/GroceryCo.dll
+/Users/razarauf/Projects/GroceryCo/GroceryCo/obj/Debug/netcoreapp3.1/GroceryCo.pdb
+/Users/razarauf/Projects/GroceryCo/GroceryCo/obj/Debug/netcoreapp3.1/GroceryCo.genruntimeconfig.cache
