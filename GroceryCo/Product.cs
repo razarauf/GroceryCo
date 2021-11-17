@@ -8,31 +8,31 @@ namespace GroceryCo
         private string name;
         private float price;
         private int quantity;
-        // How many cents off:
         private float discount;
         private float quantityDiscount;
-        //public int additionalDiscount;
 
-        public List<Product> Products;
+        private List<Product> products;
+
+        public float Total { get; private set; }
 
         public Product()
         {
-            Products = new List<Product>();
+            products = new List<Product>();
         }
 
         public void GroupItems(string[] logFile)
         {
             for (int i = 0; i < logFile.Length; i++)
             {
-                if (!CheckIfProductExists(logFile[i], Products))
+                if (!CheckIfProductExists(logFile[i], products))
                 {
-                    Products.Add(new Product { name = logFile[i] });
+                    products.Add(new Product { name = logFile[i] });
                 }
             }
 
-            for (int i = 0; i < Products.Count; i++)
+            for (int i = 0; i < products.Count; i++)
             {
-                Products[i].quantity = GetQuantity(Products[i].name, logFile);
+                products[i].quantity = GetQuantity(products[i].name, logFile);
             }
         }
 
@@ -66,7 +66,7 @@ namespace GroceryCo
 
         public void SetPricesAndDiscountFromCatalog()
         {
-            foreach (var eachProd in Products)
+            foreach (var eachProd in products)
             {
                 if (eachProd.name.ToLower() == "apple")
                 {
@@ -90,27 +90,24 @@ namespace GroceryCo
             }
         }
 
-        public float DetermineTotal()
+        public void DetermineTotal()
         {
-            float total = 0f;
+            Total = 0f;
 
-            for (int i = 0; i < Products.Count; i++)
+            for (int i = 0; i < products.Count; i++)
             {
                 // Group discount
-                if (Products[i].quantityDiscount > 0 && Products[i].quantity >= 3 )
+                if (products[i].quantityDiscount > 0 && products[i].quantity >= 3 )
                 {
-                    total += (float) Math.Floor(Products[i].quantity / 3f) * Products[i].quantityDiscount;
-                    total += Products[i].quantity % 3f * Products[i].price;
+                    Total += (float) Math.Floor(products[i].quantity / 3f) * products[i].quantityDiscount;
+                    Total += products[i].quantity % 3f * products[i].price;
                 }
                 // Original and sale price
                 else
                 {
-                    total += (Products[i].price - Products[i].discount) * Products[i].quantity;
+                    Total += (products[i].price - products[i].discount) * products[i].quantity;
                 }
             }
-
-            return total;
         }
-
     }
 }

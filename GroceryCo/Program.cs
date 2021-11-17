@@ -33,9 +33,9 @@ namespace GroceryCo
                 product.SetPricesAndDiscountFromCatalog();
 
                 // Determine the discount and total
-                float total = product.DetermineTotal();
+                product.DetermineTotal();
 
-                Console.WriteLine(String.Format("Total Due: {0:C}", total));
+                Console.WriteLine(String.Format("Total Due: {0:C}", product.Total));
             }
             else
             {

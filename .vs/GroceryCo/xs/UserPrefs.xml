@@ -2,15 +2,15 @@
   <MonoDevelop.Ide.ItemProperties.GroceryCo PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="GroceryCo/Product.cs">
     <Files>
-      <File FileName="GroceryCo/Program.cs" Line="34" Column="42" />
-      <File FileName="GroceryCo/Product.cs" Line="106" Column="43" />
+      <File FileName="GroceryCo/Program.cs" Line="38" Column="82" />
+      <File FileName="GroceryCo/Product.cs" Line="94" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="GroceryCo" expanded="True">
             <Node name="GroceryCo" expanded="True">
-              <Node name="INPUT_FILE.txt" selected="True" />
+              <Node name="Product.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -21,7 +21,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/razarauf/Projects/GroceryCo/GroceryCo/GroceryCo/Product.cs" relfile="GroceryCo/Product.cs" line="102" column="1" />
+      <Breakpoint file="/Users/razarauf/Projects/GroceryCo/GroceryCo/GroceryCo/Product.cs" relfile="GroceryCo/Product.cs" line="94" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
