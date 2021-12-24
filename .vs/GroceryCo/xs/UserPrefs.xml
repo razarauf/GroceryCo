@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{A07D68D2-ACC4-4C06-A17E-8ACA1F3B0BE2}|Default">
   <MonoDevelop.Ide.ItemProperties.GroceryCo PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GroceryCo/Product.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GroceryCo/Program.cs">
     <Files>
-      <File FileName="GroceryCo/Program.cs" Line="38" Column="82" />
+      <File FileName="GroceryCo/Program.cs" Line="36" Column="22" />
       <File FileName="GroceryCo/Product.cs" Line="94" Column="1" />
     </Files>
     <Pads>
@@ -10,7 +10,7 @@
         <State name="__root__">
           <Node name="GroceryCo" expanded="True">
             <Node name="GroceryCo" expanded="True">
-              <Node name="Product.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
